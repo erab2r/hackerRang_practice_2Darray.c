@@ -6,22 +6,22 @@ int main() {
     scanf("%d", &N);
 
     int a[N][N];
-    int primarySum = 0, secondarySum = 0;
+    int primary_Sum = 0, secondary_Sum = 0;
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
             scanf("%d", &a[i][j]);
 
             if (i == j) {
-                primarySum += a[i][j]; 
+                primary_Sum += a[i][j]; 
             }
 
             if (i + j == N - 1) {
-                secondarySum += a[i][j]; 
+                secondary_Sum += a[i][j]; 
             }
         }
     }
 
-    int difference = abs(primarySum - secondarySum);
+    int difference = abs(primary_Sum - secondary_Sum);
     printf("%d\n", difference);
 
     return 0;
